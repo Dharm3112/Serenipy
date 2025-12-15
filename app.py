@@ -4,7 +4,7 @@ from map_engine import QuietRouteFinder
 from geopy.distance import geodesic
 
 # --- CONFIG ---
-st.set_page_config(page_title="Serenipy V2", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Serenipy", layout="wide", initial_sidebar_state="expanded")
 
 
 # --- LOAD CSS ---

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b1f938c-50e9-4d67-8311-90136b53a13f" name="Changes" comment="Implement mobile CSS, Safe Night Mode lighting logic, and Elevation API integration" />
+    <list default="true" id="1b1f938c-50e9-4d67-8311-90136b53a13f" name="Changes" comment="Implement mobile CSS, Safe Night Mode lighting logic, and Elevation API integration">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1765776767673</updated>
       <workItem from="1765776768738" duration="6225000" />
-      <workItem from="1765783294814" duration="1237000" />
+      <workItem from="1765783294814" duration="2311000" />
     </task>
     <task id="LOCAL-00001" summary="Starting New Project Named &quot;Serenipy&quot;">
       <option name="closed" value="true" />
