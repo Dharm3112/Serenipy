@@ -1,12 +1,17 @@
 # 🌙 Serenipy: The Smart City Navigator
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit)
-![OpenStreetMap](https://img.shields.io/badge/Data-OpenStreetMap-green?style=for-the-badge)
+[![Python](https://img.shields.io/badge/Python-3.12%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io/)
+[![OpenStreetMap](https://img.shields.io/badge/Data-OpenStreetMap-7EBC6F?style=for-the-badge&logo=openstreetmap&logoColor=white)](https://www.openstreetmap.org/)
+[![Live App](https://img.shields.io/badge/Live_Demo-Serenipy_V2-purple?style=for-the-badge)](https://serenipy.streamlit.app/)
 
-**Serenipy** is a geospatial web application that prioritizes **safety, silence, and comfort** over speed. 
+> **Navigate your city by Silence, Safety, and Comfort.**
 
-While Google Maps optimizes for the shortest time, Serenipy uses graph theory to find the "happiest" path—avoiding dark alleyways at night, skipping steep hills, and prioritizing green parks over noisy highways.
+**Serenipy** is a geospatial web application that prioritizes your well-being over speed. While Google Maps optimizes for the shortest travel time, Serenipy uses graph theory to find the "happiest" walking path—avoiding dark alleyways at night, skipping steep hills, and prioritizing green parks over noisy highways.
+
+## 🔗 Live Demo
+Check out the live application here:  
+**👉 [Serenipy V2 · Streamlit](https://serenipy.streamlit.app/)**
 
 ---
 
@@ -14,27 +19,27 @@ While Google Maps optimizes for the shortest time, Serenipy uses graph theory to
 
 ### 🌍 Global Routing
 * Works for **any two addresses on Earth** (optimized for walking distances <10km).
-* Dynamically downloads live street data from OpenStreetMap.
+* Dynamically downloads live street data from OpenStreetMap (Overpass API) on demand.
 
 ### 🔦 Safe Night Mode
 * **Problem:** Walking home at night can be scary on unlit streets.
-* **Solution:** Checks street lighting data (`lit=yes` tags). The algorithm applies a heavy penalty to unlit roads, routing you through well-lit main streets even if it takes a few minutes longer.
+* **Solution:** Checks street lighting data (`lit=yes` tags) from OSM. The algorithm applies a heavy penalty (5x cost) to unlit roads or dark alleyways, routing you through well-lit main streets even if it takes a few minutes longer.
 
-### ⛰️ Hill Avoidance (Elevation API)
+### ⛰️ Hill Avoidance (Elevation Support)
 * **Problem:** Carrying groceries up a steep hill is exhausting.
-* **Solution:** Integrates the **Open-Elevation API** to calculate the gradient of the route. It finds the "flattest" path available.
+* **Solution:** Integrates the **Open-Elevation API** to calculate the gradient of the route. It detects elevation changes and finds the "flattest" path available.
 
 ### 📱 Mobile-First Design
 * Custom CSS styling makes the app feel like a native mobile app.
-* "Dark Mode" map tiles (CartoDB Dark Matter) for reduced eye strain.
+* **Dark Mode** map tiles (CartoDB Dark Matter) for reduced eye strain and better contrast at night.
 
 ---
 
 ## 🛠️ Tech Stack
 
 * **Frontend:** `Streamlit` (Web UI), `CSS3` (Custom Styling).
-* **Geospatial Logic:** `OSMnx`, `NetworkX` (Graph Theory), `Geopy`.
-* **Visualization:** `Folium` (Interactive Maps).
+* **Geospatial Logic:** `OSMnx` (Map Data), `NetworkX` (Graph Algorithms), `Geopy` (Distance calculations).
+* **Visualization:** `Folium` (Interactive Leaflet Maps).
 * **APIs:** OpenStreetMap (Overpass), Open-Elevation.
 
 ---
@@ -99,17 +104,17 @@ streamlit run app.py
 
 ## 🧠 How the Algorithm Works
 
-Serenipy uses **Dijkstra's Algorithm**, but instead of `Edge Weight = Distance`, we use a dynamic `Custom Cost`:
+Serenipy uses **Dijkstra's Algorithm**, but instead of `Edge Weight = Distance`, we use a dynamic `Custom Cost` formula:
 
 $$ Cost = Distance \times (NoiseFactor \times SafetyPenalty \times HillPenalty) $$
 
 1.  **Noise Factor:**
-      * *Highways:* 10.0 (Avoid)
-      * *Parks/Footways:* 0.5 (Prefer)
+      * *Highways/Main Roads:* 10.0 (Avoid)
+      * *Parks/Footways:* 0.5 (Prefer - "Bonus")
 2.  **Safety Penalty (Night Mode):**
       * If `lit=no` or unknown: Cost is multiplied by **5x**.
 3.  **Hill Penalty (Elevation Mode):**
-      * If gradient \> 5%: Cost increases based on slope steepness.
+      * If gradient \> 5%: Cost increases proportionally to slope steepness.
 
 -----
 
