@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.12%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io/)
 [![OpenStreetMap](https://img.shields.io/badge/Data-OpenStreetMap-7EBC6F?style=for-the-badge&logo=openstreetmap&logoColor=white)](https://www.openstreetmap.org/)
-[![Live App](https://img.shields.io/badge/Live_Demo-Serenipy_V2-purple?style=for-the-badge)](https://serenipy.streamlit.app/)
+[![Live App](https://img.shields.io/badge/Live_Demo-Serenipy-purple?style=for-the-badge)](https://serenipy.streamlit.app/)
 
 > **Navigate your city by Silence, Safety, and Comfort.**
 
@@ -11,7 +11,7 @@
 
 ## 🔗 Live Demo
 Check out the live application here:  
-**👉 [Serenipy V2 · Streamlit](https://serenipy.streamlit.app/)**
+**👉 [Serenipy · Streamlit](https://serenipy.streamlit.app/)**
 
 ---
 
