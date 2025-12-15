@@ -140,6 +140,8 @@ Contributions are welcome\!
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
------
+---
 
-**Created with ❤️ by [Your Name]**
+<p align="center">
+  <b>Serenipy</b> • Created by <a href="https://github.com/Dharm3112"><b>Dharm Patel</b></a>
+</p>
