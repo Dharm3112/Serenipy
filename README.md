@@ -117,7 +117,7 @@ $$ Cost = Distance \times (NoiseFactor \times SafetyPenalty \times HillPenalty) 
       * If gradient \> 5%: Cost increases proportionally to slope steepness.
 
 -----
-
+<!--
 ## 📸 Screenshots
 
 | Light Mode (Default) | Dark Mode (Night Safety) |
@@ -125,7 +125,7 @@ $$ Cost = Distance \times (NoiseFactor \times SafetyPenalty \times HillPenalty) 
 | *Optimized for greenery and parks.* | *Optimized for well-lit main roads.* |
 
 -----
-
+-->
 ## 🤝 Contributing
 
 Contributions are welcome\!
