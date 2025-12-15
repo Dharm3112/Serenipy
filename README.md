@@ -1,57 +1,82 @@
-# 🌿 Serenipy: The Quiet Route Finder
+# 🌙 Serenipy: The Smart City Navigator
 
-**Serenipy** is a geospatial web application that prioritizes **peace over speed**. While standard navigation apps (Google Maps, Waze) optimize for the shortest travel time, Serenipy uses graph theory and OpenStreetMap data to find the **quietest walking route** between two locations anywhere in the world.
+[![Python](https://img.shields.io/badge/Python-3.12%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)](https://streamlit.io/)
+[![OpenStreetMap](https://img.shields.io/badge/Data-OpenStreetMap-7EBC6F?style=for-the-badge&logo=openstreetmap&logoColor=white)](https://www.openstreetmap.org/)
+[![Live App](https://img.shields.io/badge/Live_Demo-Serenipy-purple?style=for-the-badge)](https://serenipy.streamlit.app/)
 
-[Image of project workflow diagram]
+> **Navigate your city by Silence, Safety, and Comfort.**
+
+**Serenipy** is a geospatial web application that prioritizes your well-being over speed. While Google Maps optimizes for the shortest travel time, Serenipy uses graph theory to find the "happiest" walking path—avoiding dark alleyways at night, skipping steep hills, and prioritizing green parks over noisy highways.
+
+## 🔗 Live Demo
+Check out the live application here:  
+**👉 [Serenipy · Streamlit](https://serenipy.streamlit.app/)**
+
+---
 
 ## 🚀 Key Features
 
-  * **Global Coverage:** Works for any two addresses on Earth (optimized for walking distances \<10km).
-  * **Dual Routing Engine:**
-      * 🔴 **Fast Route:** Calculates the standard shortest path (Dijkstra's Algorithm based on distance).
-      * 🟢 **Quiet Route:** Calculates the path of least stress (Dijkstra's Algorithm based on "Quiet Scores").
-  * **Greenery Detection:** Algorithms automatically prefer parks, footpaths, and gardens over main roads.
-  * **Interactive UI:** Built with **Streamlit** for a responsive, dark-mode friendly web interface.
-  * **Smart Caching:** Optimizes map downloads to prevent API throttling.
+### 🌍 Global Routing
+* Works for **any two addresses on Earth** (optimized for walking distances <10km).
+* Dynamically downloads live street data from OpenStreetMap (Overpass API) on demand.
+
+### 🔦 Safe Night Mode
+* **Problem:** Walking home at night can be scary on unlit streets.
+* **Solution:** Checks street lighting data (`lit=yes` tags) from OSM. The algorithm applies a heavy penalty (5x cost) to unlit roads or dark alleyways, routing you through well-lit main streets even if it takes a few minutes longer.
+
+### ⛰️ Hill Avoidance (Elevation Support)
+* **Problem:** Carrying groceries up a steep hill is exhausting.
+* **Solution:** Integrates the **Open-Elevation API** to calculate the gradient of the route. It detects elevation changes and finds the "flattest" path available.
+
+### 📱 Mobile-First Design
+* Custom CSS styling makes the app feel like a native mobile app.
+* **Dark Mode** map tiles (CartoDB Dark Matter) for reduced eye strain and better contrast at night.
+
+---
 
 ## 🛠️ Tech Stack
 
-  * **Python:** Core logic.
-  * **OSMnx:** For downloading and constructing street networks from OpenStreetMap.
-  * **NetworkX:** For performing complex graph pathfinding algorithms.
-  * **Folium:** For generating interactive, tile-based maps.
-  * **Streamlit:** For the frontend web interface.
+* **Frontend:** `Streamlit` (Web UI), `CSS3` (Custom Styling).
+* **Geospatial Logic:** `OSMnx` (Map Data), `NetworkX` (Graph Algorithms), `Geopy` (Distance calculations).
+* **Visualization:** `Folium` (Interactive Leaflet Maps).
+* **APIs:** OpenStreetMap (Overpass), Open-Elevation.
+
+---
 
 ## 📂 Project Structure
 
 ```text
 Serenipy/
 │
-├── app.py              # The Main Application (Streamlit UI)
-├── map_engine.py       # The Logic Core (Map downloading, routing algorithms)
-├── config.py           # Configuration (Noise weights, park bonuses)
-├── requirements.txt    # Project dependencies
+├── app.py              # The Main Interface (Streamlit)
+├── map_engine.py       # The Logic Core (Routing, API calls, Weights)
+├── config.py           # Configuration (Noise weights, multipliers)
+├── style.css           # Custom CSS for Mobile/Dark theme
+├── requirements.txt    # Library dependencies
 └── README.md           # Documentation
-```
+````
+
+-----
 
 ## ⚙️ Installation Guide
 
-Follow these steps to set up the project locally.
+Follow these steps to run Serenipy on your local machine.
 
 ### 1\. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/serenipy.git
+git clone [https://github.com/your-username/serenipy.git](https://github.com/your-username/serenipy.git)
 cd serenipy
 ```
 
-### 2\. Set up Virtual Environment (Recommended)
+### 2\. Create a Virtual Environment
 
-**Windows:**
+**Windows (PowerShell):**
 
-```bash
+```powershell
 python -m venv venv
-venv\Scripts\activate
+.\venv\Scripts\Activate
 ```
 
 **Mac/Linux:**
@@ -67,58 +92,56 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 🏃‍♂️ How to Run
+### 4\. Run the App
 
-1.  Ensure your virtual environment is active.
-2.  Run the Streamlit app:
-    ```bash
-    streamlit run app.py
-    ```
-3.  A new tab will open in your browser at `http://localhost:8501`.
-
-## 🎮 Usage
-
-1.  **Enter Locations:** In the left sidebar, type a Start Location (e.g., *"Times Square, New York"*) and a Destination (e.g., *"Bryant Park, New York"*).
-2.  **Be Specific:** For best results, include the city name to help the geocoder.
-3.  **Find Route:** Click the **"Find Quiet Route"** button.
-4.  **Wait:** The app will download live map data (taking 10-30 seconds depending on area size).
-5.  **Explore:** Compare the **Red Line** (Fast) with the **Green Line** (Quiet) on the interactive map.
-
-## 🧠 How It Works (The Logic)
-
-Serenipy assigns a "Noise Cost" to every street edge in the graph based on `config.py`:
-
-  * **High Cost (Avoid):** Highways, Primary Roads, Trunks.
-  * **Low Cost (Prefer):** Residential streets, Living streets.
-  * **Bonus (Target):** Parks, Footways, Cycle paths (Cost multiplied by `0.4`).
-
-<!-- end list -->
-
-```python
-# Simplified Logic Example
-if road_type == 'highway':
-    cost = length * 10.0  # Very expensive to walk here
-elif road_type == 'park_path':
-    cost = length * 0.4   # Very cheap (attractive) to walk here
+```bash
+streamlit run app.py
 ```
 
-## 🔮 Future Roadmap
-
-  * [ ] **Elevation Support:** Avoid steep hills for a physically easier walk.
-  * [ ] **Crime Data Overlay:** Avoid high-crime zones (requires external API).
-  * [ ] **Lighting Data:** "Safe Night Walk" mode preferring well-lit streets.
-  * [ ] **Mobile Layout:** Optimize CSS for phone screens.
-
-## 🤝 Contributing
-
-Contributions are welcome\! Please fork the repository and submit a Pull Request.
+*The app will open automatically at `http://localhost:8501`*
 
 -----
 
-**License:** MIT
+## 🧠 How the Algorithm Works
+
+Serenipy uses **Dijkstra's Algorithm**, but instead of `Edge Weight = Distance`, we use a dynamic `Custom Cost` formula:
+
+$$ Cost = Distance \times (NoiseFactor \times SafetyPenalty \times HillPenalty) $$
+
+1.  **Noise Factor:**
+      * *Highways/Main Roads:* 10.0 (Avoid)
+      * *Parks/Footways:* 0.5 (Prefer - "Bonus")
+2.  **Safety Penalty (Night Mode):**
+      * If `lit=no` or unknown: Cost is multiplied by **5x**.
+3.  **Hill Penalty (Elevation Mode):**
+      * If gradient \> 5%: Cost increases proportionally to slope steepness.
+
+-----
+
+## 📸 Screenshots
+
+| Light Mode (Default) | Dark Mode (Night Safety) |
+|:---:|:---:|
+| *Optimized for greenery and parks.* | *Optimized for well-lit main roads.* |
+
+-----
+
+## 🤝 Contributing
+
+Contributions are welcome\!
+
+1.  Fork the repo.
+2.  Create a feature branch (`git checkout -b feature/NewAlgo`).
+3.  Commit your changes.
+4.  Push to the branch.
+5.  Open a Pull Request.
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
 <p align="center">
-  <b>SereniPy</b> • Created by <a href="https://github.com/Dharm3112"><b>Dharm Patel</b></a>
+  <b>Serenipy</b> • Created by <a href="https://github.com/Dharm3112"><b>Dharm Patel</b></a>
 </p>
