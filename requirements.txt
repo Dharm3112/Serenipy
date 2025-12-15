@@ -1,0 +1,9 @@
+streamlit
+streamlit-folium
+osmnx
+networkx
+folium
+geopy
+matplotlib
+scikit-learn
+requests

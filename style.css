@@ -1,0 +1,29 @@
+/* style.css */
+
+/* 1. Make the main container full width on mobile */
+.block-container {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+/* 2. Style the "Find Route" button */
+div.stButton > button {
+    width: 100%;
+    border-radius: 25px;
+    background-color: #00ADB5;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+/* 3. Hide the default Streamlit hamburger menu/footer for a cleaner look */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+
+/* 4. Custom Metrics Cards */
+[data-testid="stMetricValue"] {
+    font-size: 1.5rem !important;
+}

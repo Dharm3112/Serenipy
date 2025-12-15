@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1b1f938c-50e9-4d67-8311-90136b53a13f" name="Changes" comment="Implement mobile CSS, Safe Night Mode lighting logic, and Elevation API integration" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Dharm3112&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Dharm3112/Serenipy.git&quot;,
+    &quot;accountId&quot;: &quot;eaa27bc2-d127-4b7f-ab49-a7631a09d5f2&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="36rtxu3H21eo8T4EIkN0593fjDt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PY-252.27397.106" />
+        <option value="bundled-python-sdk-4e2b1448bda8-9a97661f3031-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.27397.106" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b1f938c-50e9-4d67-8311-90136b53a13f" name="Changes" comment="" />
+      <created>1765776767673</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765776767673</updated>
+      <workItem from="1765776768738" duration="6225000" />
+      <workItem from="1765783294814" duration="1237000" />
+    </task>
+    <task id="LOCAL-00001" summary="Starting New Project Named &quot;Serenipy&quot;">
+      <option name="closed" value="true" />
+      <created>1765776875122</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765776875122</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added config.py">
+      <option name="closed" value="true" />
+      <created>1765776929318</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765776929318</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added map_engine.py">
+      <option name="closed" value="true" />
+      <created>1765776957975</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765776957975</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added main.py">
+      <option name="closed" value="true" />
+      <created>1765776993043</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765776993043</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Written Code In config.py">
+      <option name="closed" value="true" />
+      <created>1765777051723</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765777051723</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Written Code In map_engine.py">
+      <option name="closed" value="true" />
+      <created>1765777074958</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765777074958</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Written Code In main.py">
+      <option name="closed" value="true" />
+      <created>1765777107366</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765777107366</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Written requirements.txt">
+      <option name="closed" value="true" />
+      <created>1765777158251</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1765777158251</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Updated Codes In Every .py File">
+      <option name="closed" value="true" />
+      <created>1765777243597</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1765777243597</updated>
+    </task>
+    <task id="LOCAL-00010" summary="got some errors in map_engine.py fixed it">
+      <option name="closed" value="true" />
+      <created>1765778343277</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765778343277</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Deleted Some Files">
+      <option name="closed" value="true" />
+      <created>1765778613391</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1765778613391</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added app.py">
+      <option name="closed" value="true" />
+      <created>1765779057793</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1765779057793</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added Unreviosed Files">
+      <option name="closed" value="true" />
+      <created>1765779073776</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1765779073776</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updated requirenments.txt">
+      <option name="closed" value="true" />
+      <created>1765779186891</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1765779186891</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Refactor app to support global routing and dynamic map downloading">
+      <option name="closed" value="true" />
+      <created>1765780589618</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1765780589618</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Optimize map download using radial geometry to reduce API load time">
+      <option name="closed" value="true" />
+      <created>1765781007271</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1765781007271</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Optimize map download using radial geometry to reduce API load time (done remaning)">
+      <option name="closed" value="true" />
+      <created>1765781026350</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1765781026350</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Initial commit of Serenipy App while Deploying">
+      <option name="closed" value="true" />
+      <created>1765782294026</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1765782294026</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Updated requirements.txt">
+      <option name="closed" value="true" />
+      <created>1765782685667</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1765782685667</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Updated requirements.txt">
+      <option name="closed" value="true" />
+      <created>1765782772432</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1765782772432</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Updated requirements.txt">
+      <option name="closed" value="true" />
+      <created>1765782987043</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1765782987043</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Updated requirements.txt">
+      <option name="closed" value="true" />
+      <created>1765783043448</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1765783043448</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Implement mobile CSS, Safe Night Mode lighting logic, and Elevation API integration">
+      <option name="closed" value="true" />
+      <created>1765783538157</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1765783538157</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Implement mobile CSS, Safe Night Mode lighting logic, and Elevation API integration">
+      <option name="closed" value="true" />
+      <created>1765783577080</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1765783577080</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Implement mobile CSS, Safe Night Mode lighting logic, and Elevation API integration">
+      <option name="closed" value="true" />
+      <created>1765783657472</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1765783657472</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Implement mobile CSS, Safe Night Mode lighting logic, and Elevation API integration">
+      <option name="closed" value="true" />
+      <created>1765785122030</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1765785122030</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Implement mobile CSS, Safe Night Mode lighting logic, and Elevation API integration">
+      <option name="closed" value="true" />
+      <created>1765785154137</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1765785154137</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Starting New Project Named &quot;Serenipy&quot;" />
+    <MESSAGE value="Added config.py" />
+    <MESSAGE value="Added map_engine.py" />
+    <MESSAGE value="Added main.py" />
+    <MESSAGE value="Written Code In config.py" />
+    <MESSAGE value="Written Code In map_engine.py" />
+    <MESSAGE value="Written Code In main.py" />
+    <MESSAGE value="Written requirements.txt" />
+    <MESSAGE value="Updated Codes In Every .py File" />
+    <MESSAGE value="got some errors in map_engine.py fixed it" />
+    <MESSAGE value="Deleted Some Files" />
+    <MESSAGE value="Added app.py" />
+    <MESSAGE value="Added Unreviosed Files" />
+    <MESSAGE value="Updated requirenments.txt" />
+    <MESSAGE value="Refactor app to support global routing and dynamic map downloading" />
+    <MESSAGE value="Optimize map download using radial geometry to reduce API load time" />
+    <MESSAGE value="Optimize map download using radial geometry to reduce API load time (done remaning)" />
+    <MESSAGE value="Initial commit of Serenipy App while Deploying" />
+    <MESSAGE value="Updated requirements.txt" />
+    <MESSAGE value="Implement mobile CSS, Safe Night Mode lighting logic, and Elevation API integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement mobile CSS, Safe Night Mode lighting logic, and Elevation API integration" />
+  </component>
+</project>
