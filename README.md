@@ -11,7 +11,7 @@
 
 ## 🔗 Live Demo
 Check out the live application here:  
-**👉 [Serenipy · Streamlit](https://serenipy.streamlit.app/)**
+**👉 [Serenipy](https://serenipy.streamlit.app/)**
 
 ---
 
