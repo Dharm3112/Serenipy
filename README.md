@@ -37,7 +37,6 @@ Check out the live application here:
 
 ## 🛠️ Tech Stack
 
-
 * **Frontend:** `Streamlit` (Web UI), `CSS3` (Custom Styling).
 * **Geospatial Logic:** `OSMnx` (Map Data), `NetworkX` (Graph Algorithms), `Geopy` (Distance calculations).
 * **Visualization:** `Folium` (Interactive Leaflet Maps).
