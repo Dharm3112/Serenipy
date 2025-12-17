@@ -7,6 +7,7 @@
 
 > **Navigate your city by Silence, Safety, and Comfort.**
 
+
 **Serenipy** is a geospatial web application that prioritizes your well-being over speed. While Google Maps optimizes for the shortest travel time, Serenipy uses graph theory to find the "happiest" walking path—avoiding dark alleyways at night, skipping steep hills, and prioritizing green parks over noisy highways.
 
 ## 🔗 Live Demo
